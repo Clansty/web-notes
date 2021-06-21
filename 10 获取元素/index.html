@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+<p>jq 里面获取元素用的是像 CSS 里面一样的选择器。通过 $('选择器') 来获取元素</p>
+<p>获取到的是一个 jQuery 的“包裹”对象，里面包裹了一些元素，可能是1个也可能很多，或者没有</p>
+<p>这个 jQuery 对象通过 jQuery 自己的 functions 来操作 dom 元素，也可以把里面包裹的原始 DOM 对象拿出来</p>
+
+<style>
+    div p {
+        background-color: cyan;
+    }
+
+    .red {
+        color: red
+    }
+</style>
+<div>
+    <p>这是一个p</p>
+    <p>另一个</p>
+    <p class="red">red</p>
+</div>
+<script>
+    $('div p').text('div里面所有的p')
+    $('.red').text('红色')
+</script>
+<p>这里的 text(...) 就相当于原本 DOM 里面的 innerText=...</p>
+<p>在对 jQuery 对象进行操作的时候会操作所有被包裹的对象</p>
+<p>jQuery 可以像数组一样操作，用下标把里面包裹的 DOM 对象拿出来</p>
+<p id="test">某个p</p>
+<script>
+    var test = $('#test')
+    console.log(test)
+    console.log(test[0])
+    test[0].innerText='现在被包裹的 DOM 对象被拿出来了'
+</script>
+
+</body>
+</html>
