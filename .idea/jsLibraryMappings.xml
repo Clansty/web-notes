@@ -2,5 +2,6 @@
 <project version="4">
   <component name="JavaScriptLibraryMappings">
     <file url="file://$PROJECT_DIR$/10 获取元素/index.html" libraries="{jquery-1.12.4}" />
+    <file url="file://$PROJECT_DIR$/15 jquery的操作/index.html" libraries="{jquery-1.12.4}" />
   </component>
 </project>

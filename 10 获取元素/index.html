@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>获取元素</title>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
 <p>jq 里面获取元素用的是像 CSS 里面一样的选择器。通过 $('选择器') 来获取元素</p>
 <p>获取到的是一个 jQuery 的“包裹”对象，里面包裹了一些元素，可能是1个也可能很多，或者没有</p>
 <p>这个 jQuery 对象通过 jQuery 自己的 functions 来操作 dom 元素，也可以把里面包裹的原始 DOM 对象拿出来</p>
+
+<p>要先引用 jquery</p>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 <style>
     div p {
@@ -28,6 +30,9 @@
     $('div p').text('div里面所有的p')
     $('.red').text('红色')
 </script>
+<p>css 里面的各种选择器都可以用，包括 +，～，[] 之类高级的选择器</p>
+<p>用高级选择器的时候，小心空格</p>
+
 <p>这里的 text(...) 就相当于原本 DOM 里面的 innerText=...</p>
 <p>在对 jQuery 对象进行操作的时候会操作所有被包裹的对象</p>
 <p>jQuery 可以像数组一样操作，用下标把里面包裹的 DOM 对象拿出来</p>

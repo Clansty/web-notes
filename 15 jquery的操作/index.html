@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="1">p#1</p>
+<p id="2">p#2</p>
+<p id="3">p#3</p>
+<p id="4">p#4</p>
+<p id="5">p#5</p>
+<p id="6">p#6</p>
+<p id="7">p#7</p>
+<p id="8">p#8</p>
+<p id="9">p#9</p>
+<p id="10">p#10</p>
+<p id="11">p#11</p>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    $('#1').text('就等于 innerText')
+    $('#2').html('就等于 innerHTML')
+    $('#2').css('color', 'red')
+    '和'
+    $('#3').css({color: 'red'})
+    '是一样的'
+    '区别是第二种能一下子改多个'
+    $('#4').css({
+        color: 'red',
+        backgroundColor: 'cyan' //当 css 名称里面有-的时候要把它变成驼峰法，或者用引号
+    })
+    //当对 Jquery 对象进行一个操作之后会返回相同的对象
+    $('#5').text('所以可以把操作串联起来，可以叫做链式操作').css({
+        color: 'red',
+        'background-color': 'gray'
+    })
+    $('#6').text('.next 选择它后面的一个元素，还有一些别的方法以后再说')
+        .next().text('.next 之后就都是操作下一个元素了，也适用于链式操作')
+
+    $('#8').text('还可以实现动画应用 css，但是正式环境不要这么写，这种 js 实现动画的方法已经过时了')
+    .animate({fontSize: '30px'},5000,()=>{
+        $('#9').text('动画结束了，这是回调')
+    });
+    `参数：
+        像css第二种方法一样的变换的属性
+        时间，可以是毫秒数也可以是 'slow'(600) 'fast'(200) 'normal'(400，默认) 之后的参数都是可省略的
+        第三个是曲线效果,"linear" 和 "swing", 默认是 swing
+        第四个是一个动画结束之后的回调方法`
+
+    $('#10').text('这是 linear 效果').animate({fontSize: '30px'},5000, 'linear')
+
+
+</script>
+</body>
+</html>
