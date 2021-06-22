@@ -15,12 +15,15 @@
 <p id="8">p#8</p>
 <p id="9">p#9</p>
 <p id="10">p#10</p>
+<input type="text" id="input" value="这是 input#input 的 value">
 <p id="11">p#11</p>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <script>
     $('#1').text('就等于 innerText')
     $('#2').html('就等于 innerHTML')
+    '当 .text() 括号里不带东西的时候，意思就是获取这个 innerText。带东西就是设置 innerText'
+    console.log($('#1').text())
     $('#2').css('color', 'red')
     '和'
     $('#3').css({color: 'red'})
@@ -50,7 +53,8 @@
 
     $('#10').text('这是 linear 效果').animate({fontSize: '30px'},5000, 'linear')
 
-
+    $('#11').text($('#input').val())
+    $('#input').val('input 同类，不过是 val() 不是 text()')
 </script>
 </body>
 </html>
