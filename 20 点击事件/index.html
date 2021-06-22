@@ -3,9 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html {
+            -webkit-user-select: none;
+        }
+    </style>
 </head>
 <body>
 <p id="1">这是可以点的</p>
-<p>点了 <span id="count">0</span> 次</p>
+<p>计数器1：<span id="count1">0</span> 次</p>
+<p>计数器2：<span id="count2">0</span> 次</p>
+<p>计数器3：<span id="count3">0</span> 次</p>
+
+<p id="remove">移除所有计数器</p>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    var times1 = 0
+    var times2 = 0
+    var times3 = 0
+    '最通用的触发器方法，可以设置任何 html 事件'
+    $('#1').on('click', function () {
+        '这个on可以换成bind，区别就是 on 可以在中间多加一个参数，是在选定元素的子元素上绑定事件，意义不大'
+        //比如说 $('#1').on('click', 'span', func.... 是点击 p#1 里面的 span
+        '最好是用on'
+        $('#count1').text(++times1)
+    })
+    '对于包括点击在内的大多数事件，可以写成'
+    $('#1').click(function () {
+        $('#count2').text(++times2)
+    })
+    '如果只需要响应一次'
+    $('#1').one('click', function () {
+        $('#count3').text(++times3)
+    })
+    '可以移除所有的指定事件'
+    $('#remove').click(function () {
+        $('#1').off('click')
+        '这个 off 可以也换成 unbind'
+    })
+</script>
+
+<del>还有一种函数，可以实现类似开关的效果</del>
+<p id="t">关</p>
+<script>
+    $('#t').toggle(
+        function () {
+            $(this).text('开')
+        },
+        function () {
+            $(this).text('关')
+        })
+    '然后发现只有那个不带参数版方法的效果'
+</script>
+<p>妈的，这个改了，toggle 只有显示隐藏功能了（待会儿会讲）</p>
+<p>当它有</p>
 </body>
 </html>
