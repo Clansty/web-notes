@@ -3,9 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html {
+            -webkit-user-select: none;
+        }
+    </style>
 </head>
 <body>
+<span id="show">show</span>
+<span id="hide">hide</span>
+<span id="toggle">toggle</span>
+<span id="slideDown">slideDown</span>
+<span id="slideUp">slideUp</span>
+<span id="slideToggle">slideToggle</span>
+<span id="fadeIn">fadeIn</span>
+<span id="fadeOut">fadeOut</span>
+<span id="fadeToggle">fadeToggle</span>
+<br>
+
 <img src="https://cdn.lwqwq.com/pic/kemomimi/5.jpg">
 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    //长度宽度透明度，不加参数没动画
+    //参数是动画时间，回调
+    $('#show').click(function () {
+        $('img').show(1000)
+    })
+    $('#hide').click(function () {
+        $('img').hide(1000)
+    })
+    $('#toggle').click(function () {
+        $('img').toggle(1000)
+    })
+    //没有透明度
+    $('#slideDown').click(function () {
+        $('img').slideDown()
+    })
+    $('#slideUp').click(function () {
+        $('img').slideUp()
+    })
+    $('#slideToggle').click(function () {
+        $('img').slideToggle()
+    })
+    //只有透明度
+    $('#fadeIn').click(function () {
+        $('img').fadeIn()
+    })
+    $('#fadeOut').click(function () {
+        $('img').fadeOut()
+    })
+    $('#fadeToggle').click(function () {
+        $('img').fadeToggle()
+    })
+</script>
 </body>
 </html>

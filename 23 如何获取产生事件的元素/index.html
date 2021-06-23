@@ -3,8 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        html {
+            -webkit-user-select: none;
+        }
+    </style>
 </head>
 <body>
+<p>要打开控制台</p>
+<p id="1">这个是可以点击的</p>
+<p id="2">这里面还有一个 <span>span</span></p>
 
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script>
+    //两种方法，区别
+    //没被包裹
+    $('p').click(function (e) {
+        console.log('this: ', this)
+        console.log('e.target: ', e.target)
+    })
+</script>
 </body>
 </html>

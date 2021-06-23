@@ -4,5 +4,7 @@
     <file url="file://$PROJECT_DIR$/10 获取元素/index.html" libraries="{jquery-1.12.4}" />
     <file url="file://$PROJECT_DIR$/15 jquery的操作/index.html" libraries="{jquery-1.12.4}" />
     <file url="file://$PROJECT_DIR$/20 点击事件/index.html" libraries="{jquery-1.12.4}" />
+    <file url="file://$PROJECT_DIR$/23 如何获取产生事件的元素/index.html" libraries="{jquery-1.12.4}" />
+    <file url="file://$PROJECT_DIR$/25 显示隐藏/index.html" libraries="{jquery-1.12.4}" />
   </component>
 </project>
