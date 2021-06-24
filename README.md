@@ -12,6 +12,5 @@
 - 找元素p298
 - each 用法
 
-制作以下东西：
-
 - 鼠标停留效果
+  https://www.jquery123.com/mouseenter/
