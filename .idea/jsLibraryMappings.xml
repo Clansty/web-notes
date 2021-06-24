@@ -6,5 +6,6 @@
     <file url="file://$PROJECT_DIR$/20 点击事件/index.html" libraries="{jquery-1.12.4}" />
     <file url="file://$PROJECT_DIR$/23 如何获取产生事件的元素/index.html" libraries="{jquery-1.12.4}" />
     <file url="file://$PROJECT_DIR$/25 显示隐藏/index.html" libraries="{jquery-1.12.4}" />
+    <file url="file://$PROJECT_DIR$/30 阻止表单提交/index.html" libraries="{jquery-1.12.4}" />
   </component>
 </project>
